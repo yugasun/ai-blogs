@@ -1,0 +1,5 @@
+{
+  "buildCommand": "mdbook build",
+  "outputDirectory": "book",
+  "installCommand": "cargo install mdbook mdbook-mermaid"
+}

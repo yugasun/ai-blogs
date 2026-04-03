@@ -4,6 +4,7 @@
 
 [![Blog](https://img.shields.io/badge/visit-aiblogs.yugasun.com-purple)](https://aiblogs.yugasun.com)
 [![GitHub Pages](https://img.shields.io/badge/部署到-GitHub%20Pages-blue)](https://aiblogs.yugasun.com)
+[![Vercel](https://img.shields.io/badge/部署到-Vercel-black)](https://vercel.com)
 [![mdBook](https://img.shields.io/badge/静态网站生成器-mdBook-orange)](https://rust-lang.github.io/mdBook/)
 [![License: APACHE-2.0](https://img.shields.io/badge/License-APACHE%202.0-green)](LICENSE)
 
@@ -58,7 +59,9 @@ mdbook build
 
 4. 更新 README.md 文章列表
 
-## 自动部署流程
+## 部署方式
+
+### GitHub Pages (当前)
 
 ```
 push main → GitHub Actions → mdbook build → GitHub Pages
@@ -68,13 +71,21 @@ push main → GitHub Actions → mdbook build → GitHub Pages
 
 部署地址: https://aiblogs.yugasun.com
 
+### Vercel
+
+```
+push main → Vercel → mdbook build → Vercel CDN
+```
+
+配置文件: `vercel.json`
+
 ## 技术栈
 
 | 类别         | 技术                                          |
 | ------------ | --------------------------------------------- |
 | 静态网站生成 | [mdBook](https://rust-lang.github.io/mdBook/) |
-| 托管平台     | GitHub Pages                                  |
-| 持续集成     | GitHub Actions                                |
+| 托管平台     | GitHub Pages / Vercel                         |
+| 持续集成     | GitHub Actions / Vercel                       |
 | 内容创作     | AI (minimax-m2.5)                             |
 
 ## License
